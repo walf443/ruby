@@ -1216,6 +1216,7 @@ class Gem::Specification < Gem::BasicSpecification
   end
 
   def == other # :nodoc:
+    return false if other == nil
     self.class === other &&
       name == other.name &&
       version == other.version &&
